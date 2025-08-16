@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/mccafferyr/juanis40/main/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/mccafferyr/juanis40/main/favicon-16x16.png">
   <link rel="manifest" href="https://raw.githubusercontent.com/mccafferyr/juanis40/main/site.webmanifest">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -16,7 +16,7 @@
     
     body {
       margin: 0;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #ff8c42 0%, #d2691e 50%, #8b4513 100%);
       background-attachment: fixed;
       min-height: 100vh;
@@ -135,13 +135,14 @@
       color: white;
       padding: 12px 30px;
       border-radius: 25px;
+      font-family: 'Oswald', sans-serif;
       font-size: 1.1em;
-      font-weight: 700;
+      font-weight: 600;
       margin-bottom: 25px;
       animation: pulse 2s infinite;
       box-shadow: 0 6px 20px rgba(210, 105, 30, 0.5);
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
       border: 2px solid rgba(255, 255, 255, 0.3);
     }
     
@@ -168,6 +169,7 @@
       line-height: 1.1;
       animation: titleGlow 3s ease-in-out infinite alternate;
       text-shadow: 2px 2px 4px rgba(139, 69, 19, 0.3);
+      letter-spacing: 2px;
     }
     
     @keyframes titleGlow {
@@ -186,10 +188,11 @@
     }
     
     .subtitle {
+      font-family: 'Poppins', sans-serif;
       font-size: 1.3em;
       color: #666;
       margin-bottom: 30px;
-      font-weight: 300;
+      font-weight: 400;
       line-height: 1.6;
     }
     
@@ -237,8 +240,10 @@
     
     .date-time-card h2 {
       margin: 0 0 10px 0;
+      font-family: 'Oswald', sans-serif;
       font-size: 2em;
-      font-weight: 700;
+      font-weight: 600;
+      letter-spacing: 1px;
     }
     
     .date-time-card p {
@@ -278,8 +283,10 @@
     .info-card h3 {
       margin: 0 0 15px 0;
       color: #d2691e;
-      font-weight: 600;
-      font-size: 1.1em;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 500;
+      font-size: 1.2em;
+      letter-spacing: 0.5px;
     }
     
     .info-card p {
@@ -323,7 +330,10 @@
     
     .important-note h3 {
       margin: 0 0 10px 0;
-      font-size: 1.2em;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.3em;
+      font-weight: 500;
+      letter-spacing: 0.5px;
     }
     
     .important-note p {
@@ -371,8 +381,10 @@
     .contact-info h3 {
       margin: 0 0 10px 0;
       color: #d2691e;
-      font-size: 1.2em;
-      font-weight: 600;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.3em;
+      font-weight: 500;
+      letter-spacing: 0.5px;
     }
     
     .contact-info p {
@@ -429,9 +441,10 @@
         font-size: 1.6em;
       }
       
-      .info-grid {
-        grid-template-columns: 1fr;
-      }
+    .rsvp-button, .rsvp-button-early {
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
     
     @media (max-width: 480px) {
