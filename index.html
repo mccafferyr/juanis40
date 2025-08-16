@@ -237,6 +237,9 @@
       transition: all 0.3s ease;
       box-shadow: 0 8px 25px rgba(210, 105, 30, 0.4);
       animation: fadeIn 1s ease-out 0.8s both;
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
     
     .rsvp-button-early:hover {
@@ -301,98 +304,93 @@
       letter-spacing: 1px;
     }
     
-    .weather-widget {
-      background: rgba(255, 140, 66, 0.1);
-      border: 2px solid rgba(255, 140, 66, 0.2);
-      border-radius: 16px;
-      padding: 25px 20px;
-      margin: 30px 0;
-      animation: fadeIn 1s ease-out 1.1s both;
-      transition: all 0.3s ease;
-    }
-    
-    .weather-widget:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(210, 105, 30, 0.2);
-      border-color: rgba(255, 140, 66, 0.4);
-    }
-    
-    .weather-widget h3 {
-      margin: 0 0 15px 0;
-      color: #d2691e;
-      font-family: 'Oswald', sans-serif;
-      font-weight: 500;
-      font-size: 1.2em;
-      letter-spacing: 0.5px;
-    }
-    
-    .weather-info {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-    
-    .weather-widget {
-      background: rgba(255, 140, 66, 0.1);
-      border: 2px solid rgba(255, 140, 66, 0.2);
-      border-radius: 16px;
-      padding: 25px 20px;
-      margin: 30px 0;
-      animation: fadeIn 1s ease-out 1.1s both;
-      transition: all 0.3s ease;
-    }
-    
-    .weather-widget:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(210, 105, 30, 0.2);
-      border-color: rgba(255, 140, 66, 0.4);
-    }
-    
-    .weather-widget h3 {
-      margin: 0 0 15px 0;
-      color: #d2691e;
-      font-family: 'Oswald', sans-serif;
-      font-weight: 500;
-      font-size: 1.2em;
-      letter-spacing: 0.5px;
-    }
-    
-    .weather-info {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-    
-    .weather-loading {
-      color: #888;
-      font-style: italic;
-    }
-    
-    .weather-details {
-      display: flex;
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
-      flex-wrap: wrap;
+      margin: 40px 0;
+      animation: fadeIn 1s ease-out 0.6s both;
     }
     
-    .weather-item {
-      text-align: center;
-      min-width: 80px;
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
     
-    .weather-value {
-      font-weight: 600;
-      font-size: 1.1em;
-      color: #333;
+    .info-card {
+      background: rgba(255, 140, 66, 0.1);
+      border: 2px solid rgba(255, 140, 66, 0.2);
+      border-radius: 16px;
+      padding: 25px 20px;
+      transition: all 0.3s ease;
     }
     
-    .weather-label {
-      font-size: 0.8em;
-      color: #666;
-      margin-top: 2px;
+    .info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(210, 105, 30, 0.2);
+      border-color: rgba(255, 140, 66, 0.4);
+      background: rgba(255, 140, 66, 0.15);
+    }
+    
+    .info-card h3 {
+      margin: 0 0 15px 0;
+      color: #d2691e;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 500;
+      font-size: 1.2em;
+      letter-spacing: 0.5px;
+    }
+    
+    .info-card p {
+      margin: 0;
+      line-height: 1.5;
+      color: #555;
+    }
+    
+    .map-link {
+      color: #ff8c42;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    
+    .map-link:hover {
+      color: #d2691e;
+      text-decoration: underline;
+    }
+    
+    .important-note {
+      background: linear-gradient(135deg, #ff6347, #d2691e);
+      color: white;
+      padding: 20px;
+      border-radius: 16px;
+      margin: 30px 0;
+      box-shadow: 0 10px 30px rgba(255, 99, 71, 0.3);
+      animation: slideInRight 1s ease-out 0.9s both;
+    }
+    
+    @keyframes slideInRight {
+      from { 
+        opacity: 0; 
+        transform: translateX(50px); 
+      }
+      to { 
+        opacity: 1; 
+        transform: translateX(0); 
+      }
+    }
+    
+    .important-note h3 {
+      margin: 0 0 10px 0;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.3em;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+    
+    .important-note p {
+      margin: 0;
+      opacity: 0.95;
     }
     
     .rsvp-stats {
@@ -508,95 +506,6 @@
       to { opacity: 1; transform: translateY(0); }
     }
     
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin: 40px 0;
-      animation: fadeIn 1s ease-out 0.6s both;
-    }
-    
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    
-    .info-card {
-      background: rgba(255, 140, 66, 0.1);
-      border: 2px solid rgba(255, 140, 66, 0.2);
-      border-radius: 16px;
-      padding: 25px 20px;
-      transition: all 0.3s ease;
-    }
-    
-    .info-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(210, 105, 30, 0.2);
-      border-color: rgba(255, 140, 66, 0.4);
-      background: rgba(255, 140, 66, 0.15);
-    }
-    
-    .info-card h3 {
-      margin: 0 0 15px 0;
-      color: #d2691e;
-      font-family: 'Oswald', sans-serif;
-      font-weight: 500;
-      font-size: 1.2em;
-      letter-spacing: 0.5px;
-    }
-    
-    .info-card p {
-      margin: 0;
-      line-height: 1.5;
-      color: #555;
-    }
-    
-    .map-link {
-      color: #ff8c42;
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-    
-    .map-link:hover {
-      color: #d2691e;
-      text-decoration: underline;
-    }
-    
-    .important-note {
-      background: linear-gradient(135deg, #ff6347, #d2691e);
-      color: white;
-      padding: 20px;
-      border-radius: 16px;
-      margin: 30px 0;
-      box-shadow: 0 10px 30px rgba(255, 99, 71, 0.3);
-      animation: slideInRight 1s ease-out 0.9s both;
-    }
-    
-    @keyframes slideInRight {
-      from { 
-        opacity: 0; 
-        transform: translateX(50px); 
-      }
-      to { 
-        opacity: 1; 
-        transform: translateX(0); 
-      }
-    }
-    
-    .important-note h3 {
-      margin: 0 0 10px 0;
-      font-family: 'Oswald', sans-serif;
-      font-size: 1.3em;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-    }
-    
-    .important-note p {
-      margin: 0;
-      opacity: 0.95;
-    }
-    
     .rsvp-button {
       display: inline-block;
       background: linear-gradient(135deg, #ff8c42, #d2691e);
@@ -610,6 +519,9 @@
       transition: all 0.3s ease;
       box-shadow: 0 10px 30px rgba(210, 105, 30, 0.4);
       animation: bounceIn 1s ease-out 1.2s both;
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
     
     @keyframes bounceIn {
@@ -717,10 +629,20 @@
         font-size: 1.6em;
       }
       
-    .rsvp-button, .rsvp-button-early {
-      font-family: 'Oswald', sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+      }
+      
+      .footer-silhouette {
+        width: 50px;
+        height: 50px;
+      }
     }
     
     @media (max-width: 480px) {
@@ -743,7 +665,7 @@
       
       <h1>JUAN TURNS <span class="age-highlight">40</span></h1>
       
-      <p class="subtitle">Join us for a relaxed and meaningful evening to kick off Juan's birthday week — with sushi, sand, and some of his favorite people.</p>
+      <p class="subtitle">Join us for a relaxed and meaningful evening to kick off Juan's birthday week — with sushi, sand, and some of Juan's favorite people.</p>
       
       <a href="https://forms.gle/5KzRc5fcCLZhX9rS9" class="rsvp-button-early" target="_blank">
         🎉 RSVP Now
@@ -761,32 +683,6 @@
             Loading...
           </div>
         </div>
-      </div>
-      
-      <div class="rsvp-stats">
-        <h3>🎉 Party Stats</h3>
-        <div class="stats-container" id="statsContainer">
-          <div class="stat-item">
-            <div class="stat-number" id="guestCount">Loading...</div>
-            <div class="stat-label">Guests Confirmed</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number" id="zipCount">-</div>
-            <div class="stat-label">Different Areas</div>
-          </div>
-        </div>
-        <div class="progress-bar">
-          <div class="progress-fill" id="progressFill"></div>
-          <div class="progress-text" id="progressText">Loading RSVPs...</div>
-        </div>
-      </div>
-      
-      <div class="guest-map-widget">
-        <h3>🗺️ Where Guests Are Coming From</h3>
-        <div class="map-container" id="guestMap">
-          <div class="map-loading">Loading guest locations...</div>
-        </div>
-        <div class="zip-list" id="zipList"></div>
       </div>
       
       <div class="info-grid">
@@ -818,10 +714,6 @@
         <p>Please arrive by 6:00 PM sharp so we're all hidden and ready for the surprise! Juan can't know we're there until showtime.</p>
       </div>
       
-      <a href="https://forms.gle/5KzRc5fcCLZhX9rS9" class="rsvp-button" target="_blank">
-        ✨ RSVP Here ✨
-      </a>
-      
       <div class="rsvp-stats">
         <h3>🎉 Party Stats</h3>
         <div class="stats-container" id="statsContainer">
@@ -844,6 +736,10 @@
         <div class="zip-list" id="zipList"></div>
       </div>
       
+      <a href="https://forms.gle/5KzRc5fcCLZhX9rS9" class="rsvp-button" target="_blank">
+        ✨ RSVP Here ✨
+      </a>
+      
       <div class="contact-info">
         <h3>Questions?</h3>
         <p>Contact Russ for any party details</p>
@@ -865,7 +761,6 @@
   <script>
     // RSVP Data and Map functionality
     let guestData = [];
-    const TARGET_GUESTS = 30; // Set your target guest count
     
     // Zip code to city mapping for South Florida
     const zipToCityMap = {
@@ -951,7 +846,22 @@
     
     // Update statistics display
     function updateStats() {
-      const guestCount = guestData.length;
+      // Calculate total guests by summing columns F and G (party size)
+      let totalGuests = 0;
+      
+      guestData.forEach(guest => {
+        // Get values from columns F and G (0-indexed, so F=5, G=6)
+        const columnF = Object.values(guest)[5] || '0'; // Column F
+        const columnG = Object.values(guest)[6] || '0'; // Column G
+        
+        // Convert to numbers and add (handle both string and number inputs)
+        const fValue = parseInt(columnF) || 0;
+        const gValue = parseInt(columnG) || 0;
+        
+        totalGuests += fValue + gValue;
+      });
+      
+      console.log('Total guests calculated:', totalGuests); // Debug log
       
       // Find zip code column - try different possible names
       let zipColumn = null;
@@ -977,14 +887,8 @@
       
       console.log('Unique zips found:', uniqueZips); // Debug log
       
-      document.getElementById('guestCount').textContent = guestCount;
+      document.getElementById('guestCount').textContent = totalGuests;
       document.getElementById('zipCount').textContent = uniqueZips.length;
-      
-      // Update progress bar
-      const progressPercent = Math.min((guestCount / TARGET_GUESTS) * 100, 100);
-      document.getElementById('progressFill').style.width = progressPercent + '%';
-      document.getElementById('progressText').textContent = 
-        `${guestCount} of ${TARGET_GUESTS} target guests`;
         
       // Store zip column for use in map
       window.currentZipColumn = zipColumn;
