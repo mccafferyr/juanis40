@@ -446,6 +446,25 @@
       border-top: 1px solid rgba(255, 140, 66, 0.2);
       color: #888;
       font-size: 0.9em;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .footer-silhouette {
+      width: 60px;
+      height: 60px;
+      opacity: 0.3;
+      transition: opacity 0.3s ease;
+    }
+    
+    .footer-silhouette:hover {
+      opacity: 0.6;
+    }
+    
+    .footer-text {
+      flex: 1;
     }
     
     /* Mobile responsiveness */
@@ -540,7 +559,8 @@
       </div>
       
       <div class="footer">
-        www.juanis40.com
+        <div class="footer-text">www.juanis40.com</div>
+        <img src="https://raw.githubusercontent.com/mccafferyr/juanis40/main/juan_silhouette.png" alt="Juan Silhouette" class="footer-silhouette">
       </div>
     </div>
   </div>
