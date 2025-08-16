@@ -150,6 +150,12 @@
       50% { background-position: 100% 50%; }
     }
     
+    /* Floating elements animation */
+    @keyframes float-gentle {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    
     .surprise-badge {
       display: inline-block;
       background: linear-gradient(135deg, #ff6347, #d2691e);
@@ -275,7 +281,7 @@
     
     .info-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
       margin: 40px 0;
       animation: fadeIn 1s ease-out 0.6s both;
@@ -525,6 +531,11 @@
           <p><strong>Hollywood Beach</strong><br>
           @ Bougainvilla Terrace<br>
           <a href="https://maps.app.goo.gl/zrp645C78p2KVE1g8" target="_blank" class="map-link">📍 View on Google Maps</a></p>
+        </div>
+        
+        <div class="info-card">
+          <h3>🚗 Parking</h3>
+          <p>Paid surface lots available nearby. Arrive a few minutes early to find parking and get positioned for the surprise!</p>
         </div>
         
         <div class="info-card">
