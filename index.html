@@ -863,9 +863,10 @@
       
       console.log('Total guests calculated:', totalGuests); // Debug log
       
-      // Find zip code column - try different possible names
+      // Find zip code column - try different possible names including the exact one
       let zipColumn = null;
       const possibleZipColumns = [
+        'What is your home zip code?', // Exact match first
         'ZIP Code', 'Zip Code', 'zip code', 'ZIP', 'zip', 'Zip',
         'Postal Code', 'postal code', 'What is your zip code?', 
         'What\'s your zip code?'
@@ -876,6 +877,15 @@
         if (guestData.length > 0 && guestData[0].hasOwnProperty(colName)) {
           zipColumn = colName;
           break;
+        }
+      }
+      
+      // If not found by name, try to get column L directly (index 11, since L is the 12th column)
+      if (!zipColumn && guestData.length > 0) {
+        const columnLValue = Object.values(guestData[0])[11]; // Column L (0-indexed)
+        if (columnLValue !== undefined) {
+          zipColumn = Object.keys(guestData[0])[11]; // Get the header name of column L
+          console.log('Found zip column by position (Column L):', zipColumn);
         }
       }
       
