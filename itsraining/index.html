@@ -66,21 +66,28 @@
       width: 100%;
       height: 100%;
       z-index: 1;
-      opacity: 0.15;
+      opacity: 0.3;
+      pointer-events: none;
     }
     
     .raindrop {
       position: absolute;
       width: 2px;
-      height: 15px;
-      background: linear-gradient(to bottom, transparent, #60a5fa);
+      height: 20px;
+      background: linear-gradient(to bottom, rgba(147, 197, 253, 0.8), rgba(96, 165, 250, 1));
       border-radius: 0 0 50% 50%;
       animation: fall linear infinite;
     }
     
     @keyframes fall {
-      0% { transform: translateY(-100vh); opacity: 1; }
-      100% { transform: translateY(100vh); opacity: 0; }
+      0% { 
+        transform: translateY(-100vh); 
+        opacity: 1; 
+      }
+      100% { 
+        transform: translateY(100vh); 
+        opacity: 0.3; 
+      }
     }
     
     .container {
@@ -606,14 +613,14 @@
     // Create animated raindrops
     function createRaindrops() {
       const raindropsContainer = document.getElementById('raindrops');
-      const dropCount = 50;
+      const dropCount = 100;
       
       for (let i = 0; i < dropCount; i++) {
         const drop = document.createElement('div');
         drop.className = 'raindrop';
         drop.style.left = Math.random() * 100 + '%';
-        drop.style.animationDelay = Math.random() * 2 + 's';
-        drop.style.animationDuration = (Math.random() * 1 + 0.5) + 's';
+        drop.style.animationDelay = Math.random() * 3 + 's';
+        drop.style.animationDuration = (Math.random() * 1 + 1) + 's';
         raindropsContainer.appendChild(drop);
       }
     }
