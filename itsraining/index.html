@@ -66,27 +66,28 @@
       width: 100%;
       height: 100%;
       z-index: 1;
-      opacity: 0.3;
+      opacity: 0.6;
       pointer-events: none;
     }
     
     .raindrop {
       position: absolute;
-      width: 2px;
-      height: 20px;
-      background: linear-gradient(to bottom, rgba(147, 197, 253, 0.8), rgba(96, 165, 250, 1));
+      width: 3px;
+      height: 30px;
+      background: linear-gradient(to bottom, rgba(147, 197, 253, 1), rgba(59, 130, 246, 1));
       border-radius: 0 0 50% 50%;
       animation: fall linear infinite;
+      box-shadow: 0 0 2px rgba(59, 130, 246, 0.5);
     }
     
     @keyframes fall {
       0% { 
-        transform: translateY(-100vh); 
+        transform: translateY(-50px); 
         opacity: 1; 
       }
       100% { 
         transform: translateY(100vh); 
-        opacity: 0.3; 
+        opacity: 0.7; 
       }
     }
     
@@ -564,14 +565,16 @@
         <div class="info-card">
           <h3>🏢 New Location</h3>
           <p><strong>The Vintage on Harrison</strong><br>
-          1925 Harrison St, Hollywood, FL 33020<br>
+          1955 Harrison St, Hollywood, FL 33020<br>
+          <a href="https://maps.app.goo.gl/maps?q=1955+Harrison+St,+Hollywood,+FL+33020" target="_blank" class="map-link">📍 View on Google Maps</a><br>
           <a href="https://thevintageonharrison.com" target="_blank" class="map-link">🌐 Visit Website</a></p>
         </div>
         
         <div class="info-card">
           <h3>🚗 Parking</h3>
-          <p>Van Buren Parking Garage<br>
+          <p><strong>Van Buren Parking Garage</strong><br>
           S 20th Ave, Hollywood, FL 33020<br>
+          <a href="https://maps.app.goo.gl/KkgUB68nV1JTUdBi8" target="_blank" class="map-link">📍 View on Google Maps</a><br>
           Paid parking available</p>
         </div>
         
